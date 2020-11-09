@@ -1,0 +1,6 @@
+//// build de la imagen del back
+ docker build -t iwantmorebugs/back .
+
+//// una vez acabada la creación de la imagen la subo a mi repo en el hub
+docker push iwantmorebugs/back
+

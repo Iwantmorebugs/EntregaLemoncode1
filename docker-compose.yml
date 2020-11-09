@@ -1,0 +1,45 @@
+version: '3.7'
+
+services:
+  
+  backend: 
+    image: iwantmorebugs/back
+    container_name: backend
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017
+    ports: 
+      - "5000:80"
+    networks:
+      - lemoncode-challenge
+    
+  frontend:
+    image: iwantmorebugs/front
+    container_name: frontend
+    ports: 
+      - "3000:80"
+    networks:
+      - lemoncode-challenge
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    
+  mongodb:
+    image: mongo:latest
+    hostname: mongodb
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    networks:
+      - lemoncode-challenge
+    volumes:  
+      - mongodb:/data/db      
+    
+networks:
+  lemoncode-challenge:
+    driver: bridge
+
+volumes:
+  mongodb:
+
+
+        

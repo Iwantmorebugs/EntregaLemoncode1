@@ -1,0 +1,6 @@
+//// build de la imagen del front
+docker build -t iwantmorebugs/front .
+
+//// una vez acabada la creación de la imagen la subo a mi repo en el hub
+docker push iwantmorebugs/front
+

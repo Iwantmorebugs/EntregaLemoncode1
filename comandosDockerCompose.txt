@@ -1,0 +1,8 @@
+////para levantar: 
+docker-compose up
+
+////para pararlo
+docker-compose down
+
+///para matar 
+docker-compose kill
