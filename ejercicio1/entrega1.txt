@@ -1,0 +1,34 @@
+
+Ejercicio 1)
+
+mkdir foo
+cd foo
+mkdir dummy
+mkdir empty
+cd dummy
+
+cat > file1.txt 
+
+Me encanta la bash!!
+
+Ctrl+D
+
+touch file2.txt
+
+Ejercicio 2)
+
+cd .. 
+cp dummy/file2.txt empty
+rm dummy/file2.txt
+cat > empty/file2.txt
+
+Me encanta la bash!!
+
+Ctrl+D
+
+
+Ejercicio 3)
+
+./ejercicio3.sh 'Me encanta la bash!!'
+
+
