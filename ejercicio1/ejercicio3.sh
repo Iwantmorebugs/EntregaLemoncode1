@@ -9,4 +9,3 @@ echo  $1 >> file1.txt
 cd ..
 cd empty 
 touch file2.txt
-fi
